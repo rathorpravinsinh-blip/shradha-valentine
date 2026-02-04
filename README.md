@@ -1,1 +1,95 @@
-# shradha-valentine
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Shradha 💖</title>
+
+<style>
+body{
+  background:linear-gradient(135deg,#ff9a9e,#fad0c4);
+  font-family:Arial,sans-serif;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+}
+
+.card{
+  background:white;
+  padding:25px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 10px 30px rgba(0,0,0,.2);
+  max-width:320px;
+  position:relative;
+}
+
+h1{color:#ff4d6d}
+
+button{
+  padding:12px 20px;
+  border-radius:25px;
+  border:none;
+  margin:10px;
+  font-size:16px;
+}
+
+#yes{
+  background:#ff4d6d;
+  color:white;
+  position:relative;
+  z-index:2;
+}
+
+#no{
+  background:#ddd;
+  position:absolute;
+}
+
+img{
+  width:100%;
+  border-radius:15px;
+  margin-top:15px;
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+<h1>Hey Shradha 💖</h1>
+<p>Will you be my Valentine?</p>
+
+<button id="yes">Yes 💘</button>
+<button id="no">No 🙈</button>
+
+<img id="photo"
+src="https://drive.google.com/uc?export=view&id=1-E15ESsbKxZEsBXAnTZzFqbZxBfo9jGw">
+
+<audio id="song"
+src="https://cdn.pixabay.com/download/audio/2022/10/30/audio_9c4c9c7f7b.mp3">
+</audio>
+</div>
+
+<script>
+const yes=document.getElementById("yes");
+const no=document.getElementById("no");
+const photo=document.getElementById("photo");
+const song=document.getElementById("song");
+
+yes.onclick=()=>{
+ photo.style.display="block";
+ song.play().catch(()=>{});
+};
+
+no.addEventListener("touchstart",()=>{
+ no.style.left=Math.random()*70+"%";
+ no.style.top=Math.random()*70+"%";
+});
+</script>
+
+</body>
+</html>
